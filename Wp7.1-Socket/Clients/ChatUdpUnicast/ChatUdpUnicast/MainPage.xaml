@@ -1,0 +1,234 @@
+﻿<phone:PhoneApplicationPage 
+	x:Class="ChatUdpUnicast.MainPage"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+	xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+	FontFamily="{StaticResource PhoneFontFamilyNormal}"
+	FontSize="{StaticResource PhoneFontSizeNormal}"
+	Foreground="{StaticResource PhoneForegroundBrush}"    
+	xmlns:local="clr-namespace:ChatUdpUnicast"        
+	SupportedOrientations="Portrait" Orientation="Portrait"
+	shell:SystemTray.IsVisible="True">
+    <phone:PhoneApplicationPage.Resources>
+        <local:MockMainViewModel x:Key="mockModel" />
+        <local:MainPageViewModel x:Key="model" />
+        <local:BoolToVisibilityConverter x:Key="boolToVisibleConverter" />
+        <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+
+        </Style>
+        <Style x:Key="TimestampStyle" TargetType="TextBlock">
+
+        </Style>
+    </phone:PhoneApplicationPage.Resources>
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent"
+		  DataContext="{StaticResource model}"
+		  d:DataContext="{StaticResource mockModel}"
+		  >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="WINDOWS PHONE IN ACTION" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="chit chat" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid x:Name="LoginView" Visibility="{Binding IsChatViewVisible, Converter={StaticResource boolToVisibleConverter}, ConverterParameter=True}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="User Name : " Grid.Row="0" Grid.Column="0" 
+						   VerticalAlignment="Center"/>
+                <TextBox Text="{Binding UserName, Mode=TwoWay}"  Grid.Row="0" Grid.Column="1"/>
+                <TextBlock Text="Server IP : " Grid.Row="1" Grid.Column="0"
+						   VerticalAlignment="Center"/>
+                <TextBox Text="{Binding ServerIpAddress, Mode=TwoWay}" Grid.Row="1" Grid.Column="1"
+                         InputScope="Number"
+                         />
+
+                <Button Content="Connect"  Grid.Row="2" Grid.Column="1"
+                        Command="{Binding ConnectCommand}"
+                        />
+            </Grid>
+
+            <Grid x:Name="ChatView" Visibility="{Binding IsChatViewVisible, Converter={StaticResource boolToVisibleConverter}}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <ScrollViewer x:Name="scrollViewer" Grid.Row="0">
+                    
+                    <ItemsControl ItemsSource="{Binding Messages}" 
+                                  Height="Auto" VerticalAlignment="Bottom"
+                                  HorizontalContentAlignment="Stretch">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <local:MessageContentPresenter Content="{Binding}">
+                                    <local:MessageContentPresenter.RightTemplate>
+                                        <DataTemplate>
+                                            <Grid HorizontalAlignment="Stretch" Margin="0,5,0,0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*" />
+                                                    <RowDefinition Height="19" />
+                                                </Grid.RowDefinitions>
+                                                <Border Background="#FF6EA603" MinHeight="55" 
+												Margin="50,5,10,0" 
+											Name="rectangle3" VerticalAlignment="Top"
+										 HorizontalAlignment="Stretch">
+                                                    <Grid>
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="*" />
+                                                            <RowDefinition Height="38" />
+                                                        </Grid.RowDefinitions>
+                                                        <TextBlock Text="{Binding Text}" 
+														   HorizontalAlignment="Stretch"
+														   Foreground="White" 
+														   TextWrapping="Wrap"
+														   Margin="20,5,5,5" 
+														   Grid.Row="0"/>
+                                                        <TextBlock Text="{Binding Timestamp}" 
+														   HorizontalAlignment="Right" 
+														   Foreground="#FFE0DEDE"							
+														   Margin="4" Grid.Row="1"/>
+                                                    </Grid>
+                                                </Border>
+
+                                                <Path Data="M24.333334,197.66667 L24.333334,407.83368 L39.333668,407.83368" Grid.Row="1"
+												Fill="#FF6EA603" HorizontalAlignment="Right" Height="8.834" Stretch="Fill" 
+												StrokeThickness="1" UseLayoutRounding="False" Width="16" Margin="0,0,20,10.333"
+												VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5">
+                                                    <Path.RenderTransform>
+                                                        <CompositeTransform Rotation="-179.813"/>
+                                                    </Path.RenderTransform>
+                                                </Path>
+
+                                            </Grid>
+                                        </DataTemplate>
+                                    </local:MessageContentPresenter.RightTemplate>
+                                    <local:MessageContentPresenter.LeftTemplate>
+                                        <DataTemplate>
+                                            <Grid HorizontalAlignment="Stretch">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="30" />
+                                                    <RowDefinition Height="19" />
+                                                    <RowDefinition Height="*" />
+                                                </Grid.RowDefinitions>
+
+                                                <TextBlock Text="{Binding UserName}" 
+												   Foreground="White" 
+												   Margin="10,5,5,0"
+												   Grid.Row="0"/>
+
+                                                <Path Data="M24.333334,197.66667 L24.333334,407.83368 L39.333668,407.83368" Grid.Row="1"
+												Fill="#FF319A31" HorizontalAlignment="Left"
+												Height="8.834" Stretch="Fill" 
+												StrokeThickness="1" UseLayoutRounding="False" Width="16" 
+												Margin="20,0,0,0"
+												VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5">
+                                                </Path>
+                                                <Border Background="#FF319A31" MinHeight="55" 
+												Margin="5,0,50,0" Grid.Row="2"
+											Name="rectangle3" VerticalAlignment="Top"
+										 HorizontalAlignment="Stretch">
+                                                    <Grid>
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="*" />
+                                                            <RowDefinition Height="38" />
+                                                        </Grid.RowDefinitions>
+                                                        <TextBlock Text="{Binding Text}" 
+														   TextWrapping="Wrap"
+														   Foreground="White" Margin="20,5,5,5" 
+														   Grid.Row="0"/>
+                                                        <TextBlock Text="{Binding Timestamp}" 
+														   HorizontalAlignment="Right" 
+														   Foreground="#FFE0DEDE"							
+														   Margin="4" Grid.Row="1"/>
+                                                    </Grid>
+                                                </Border>
+
+
+
+                                            </Grid>
+                                        </DataTemplate>
+                                    </local:MessageContentPresenter.LeftTemplate>
+                                    <local:MessageContentPresenter.NotificationTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Foreground="Yellow"
+												   Text="{Binding Text}"
+												   Margin="10,5,5,5" />
+                                        </DataTemplate>
+                                    </local:MessageContentPresenter.NotificationTemplate>
+                                </local:MessageContentPresenter>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+
+                <Grid  Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="19" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="70" />
+                    </Grid.ColumnDefinitions>
+                    <TextBox Text="{Binding Message.Text, Mode=TwoWay}"  Background="White"
+							 Foreground="Black" Margin="0"
+							 TextWrapping="Wrap"                             
+							 AcceptsReturn="True"
+				/>
+
+                    <Path Data="M24.333334,197.66667 L24.333334,407.83368 L39.333668,407.83368" Fill="White" HorizontalAlignment="Right" Height="8.834"
+					Stretch="Fill" 
+					StrokeThickness="1" UseLayoutRounding="False" Width="16" 
+					Margin="0,0,21,5"
+					VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5">
+                        <Path.RenderTransform>
+                            <CompositeTransform Rotation="-179.813"/>
+                        </Path.RenderTransform>
+                    </Path>
+                    
+                    <Button Grid.Column="1" Command="{Binding SendCommand}">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Image Source="Icons/appbar-check.png" />
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="./Icons/appbar-check.png" 
+											Text="Send" />
+            <shell:ApplicationBarIconButton IconUri="./Icons/appbar-cancel.png" 
+											Text="Clear"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="Sign Out"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
