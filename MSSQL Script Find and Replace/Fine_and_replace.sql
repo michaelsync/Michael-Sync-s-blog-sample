@@ -1,13 +1,13 @@
 
 
 DECLARE @old_value NVARCHAR(20)
-SET @old_value = 'your_old_value'
+SET @old_value = $(old_value)
 
 DECLARE @new_value NVARCHAR(20)
-SET @new_value = 'your_new_value'
+SET @new_value = $(new_value)
 
 DECLARE @output_dir NVARCHAR(500)
-SET @output_dir = 'C:\\output\\'
+SET @output_dir = $(output_dir)
 
 DECLARE @search_result TABLE
 (
