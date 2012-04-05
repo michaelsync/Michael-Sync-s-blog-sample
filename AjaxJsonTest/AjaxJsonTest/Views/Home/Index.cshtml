@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<input type="button" id="Test" value="Test" />
+<div id="result1"></div>
+<div id="result2"></div>
+<div id="result3"></div>
+<div id="result4"></div>
+<div id="result5"></div>
+@section Javascript{
+<script type="text/javascript">
+    $(function () {
+        $("#Test").click(function () {
+            var data = { Name: "Michael Tom", Occupation: "Programmer", Salary: 8500, NumArr: [2,6,4,9] };
+            var url = "Home/GetJson";
+            $.ajax({
+                url: url,                
+                dataType: "json",
+                type: "POST",
+                data: data,
+                traditional: true,
+                success: function (result) {
+                    $("#result1").html("ajax Post => " + JSON.stringify(result));
+                }
+            });
+
+           
+        });
+    });
+        
+</script>
+}
