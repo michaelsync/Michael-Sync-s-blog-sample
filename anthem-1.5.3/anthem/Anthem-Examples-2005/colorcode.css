@@ -1,0 +1,21 @@
+.coloredcode .cmt 	{ color: #00D502; }
+.coloredcode .cmtg 	{ color: #666; }
+.coloredcode .st 		{ color: #f00; }
+.coloredcode .kwdt 	{ color: #666; }
+.coloredcode .kwd 	{ color: #00f; }
+.coloredcode .attr 	{ color: #f00; }
+.coloredcode .attrv 	{ color: #00f; }
+.coloredcode .ec 		{ color: #00f; }
+.coloredcode .tag 	{ color: #800000; }
+.coloredcode .dir    { color: #000; background: #FEFF22; }
+.coloredcode .sel    { color: #800000; }
+.coloredcode .val    { color: #00f; }
+.coloredcode .unit 	{ color: #800000; }
+.coloredcode .sqlcmt { color: #008080; }
+.coloredcode .sqlkwd { color: #00f; }
+.coloredcode .sqlkwd2 { color: #f0f; }
+.coloredcode .sqlkwd3 { color: #999; }
+.coloredcode .sqlkwd4 { color: #800000; }
+.coloredcode .num 	{ color: #00f; }
+.coloredcode .sqlst  { color: #008000;}
+.coloredcode b      { font-weight: normal; color: #008080; }

@@ -1,0 +1,105 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0AB0D242-ABC2-4FD6-BB5E-73343EBFC3CD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AnthemExtensions</RootNamespace>
+    <AssemblyName>AnthemExtensions</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;V2</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;V2</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AnthemExtensions\AutoSuggestTextBox.cs">
+      <Link>AutoSuggestTextBox.cs</Link>
+    </Compile>
+    <Compile Include="..\AnthemExtensions\EditLabel.cs">
+      <Link>EditLabel.cs</Link>
+    </Compile>
+    <Compile Include="..\AnthemExtensions\ProgressBar.cs">
+      <Link>ProgressBar.cs</Link>
+    </Compile>
+    <Compile Include="..\AnthemExtensions\Calendar.cs">
+      <Link>Calendar.cs</Link>
+    </Compile>
+    <Compile Include="..\AnthemExtensions\Constants.cs">
+      <Link>Constants.cs</Link>
+    </Compile>
+    <Compile Include="..\AnthemExtensions\DebuggerModule.cs">
+      <Link>DebuggerModule.cs</Link>
+    </Compile>
+    <Compile Include="..\AnthemExtensions\GridView.cs">
+      <Link>GridView.cs</Link>
+    </Compile>
+    <Compile Include="..\AnthemExtensions\TextBox.cs">
+      <Link>TextBox.cs</Link>
+    </Compile>
+    <Compile Include="..\AnthemExtensions\Timer.cs">
+      <Link>Timer.cs</Link>
+    </Compile>
+    <Compile Include="..\AnthemExtensions\Utils.cs">
+      <Link>Utils.cs</Link>
+    </Compile>
+    <Compile Include="..\AnthemExtensions\YuiAutoComplete.cs">
+      <Link>YuiAutoComplete.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Anthem-2005\Anthem-2005.csproj">
+      <Project>{804C7DD0-0124-4A0B-AFA8-E90F403387AB}</Project>
+      <Name>Anthem-2005</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\AnthemExtensions\EditLabel.bmp">
+      <Link>EditLabel.bmp</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\AnthemExtensions\EditLabel.js">
+      <Link>EditLabel.js</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\AnthemExtensions\EditLabelIE.js">
+      <Link>EditLabelIE.js</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\AnthemExtensions\Timer.js">
+      <Link>Timer.js</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

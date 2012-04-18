@@ -1,0 +1,635 @@
+Numbers in square brackets are SourceForge tracker numbers.
+
+2009-03-04	Andy Miller	<amiller@structured-solutions.net>
+
+* Anthem.js - Fixed Anthem_SetHiddenInputValue and Anthem_RemoveHiddenInput to be compatible with IE8.
+
+2007-09-18	Andy Miller	<amiller@structured-solutions.net>
+
+* [1731816] Anthem.js - Fix for Anthem_LoadPageScript to support Opera (by TweeZz)
+
+2007-07-30	Andy Miller	<amiller@structured-solutions.net>
+
+* Manager.cs - Changed GetAnthemManagerKey to work after .NET 3.5 is installed.
+
+2007-06-03	Andy Miller	<amiller@structured-solutions.net>
+
+Released 1.5.1
+
+2007-04-01	Andy Miller	<amiller@structured-solutions.net>
+
+* [1690011] Handle TextDuringCallback for <button> elements.
+* [1691075] Allow <textarea> in update response with file upload.
+* [1692169] Fire RadioButtonList SelectedIndexChanged when RepeatColumns > 1.
+
+2007-03-13	Andy Miller	<amiller@structured-solutions.net>
+
+Released 1.5
+
+2007-03-11	Andy Miller	<amiller@structured-solutions.net>
+
+* Manager.cs - Moved interfaces and MethodAttribute to separate files.
+* Manager.cs - Removed support for obsolete OnPreUpdate and BaseHref.
+* Added XML comments to all controls to generate documentation.
+
+2007-03-09	Andy Miller	<amiller@structured-solutions.net>
+
+* Anthem.js - Replaced Anthem_DefaultURL var with Anthem_GetCallBackUrl function.
+* Anthem.js - Refactored document.getElementById(Anthem_FormID) to Anthem_GetForm().
+* BulletedList.cs - Changed parent tag from <span> to <div> since <ul> is a block element.
+* CheckBoxList.cs - Changed parent tag to use <span> if RepeatLayout is Flow, otherwise <div>.
+* Manager.cs - Added missing ">" on closing script tag in RegisterClientScriptInclude.
+* Manager.cs - Added missing "src=" in RegisterClientScriptResource.
+* Manager.cs - Changed FindTargetMethod to include both Public and NonPublic (i.e. Protected) methods in search.
+* Manager.cs - Removed code that generates Anthem_DefaultURL var. Use Anthem_GetCallBackUrl javascript function instead.
+* RadioButtonList.cs - Added code to ASP.NET 2.0 version to render callback on each non-selected item. This mimics the ASP.NET 2.0 postback behavior.
+* RadioButtonList.cs - Changed parent tag to use <span> if RepeatLayout is Flow, otherwise <div>.
+
+2007-03-04	Andy Miller	<amiller@structured-solutions.net>
+
+* Modified FileUpload.cs to support IUpdatableControl. This means you can make the FileUpload control visible or invisible during a callback.
+* Modified Anthem-Examples-2005 FileUpload.aspx sample to demonstrate IUpdatableControl interface.
+* Modified Anthem.js to support multiple <input type="file"> controls on one page.
+
+2007-03-02	Andy Miller	<amiller@structured-solutions.net>
+
+* Modified Manager.cs to remove encoding for file upload request.
+* Modified Manager.cs to handle callback requests made with an IOFrame instead of an XmlHttpRequest.
+* Added FileUpload.cs to the Anthem control library for completeness (there is no difference between an Anthem.FileUpload and the System.Web.UI.WebControls.FileUpload controls).
+* Modified Anthem.js to use an IOFrame for callback requests that include a <input type="file"> element.
+* Added AdRotator.cs control to Anthem-2003 project.
+* Added AdRotator.cs, BulletedList.cs, and FileUpload.cs to CVS.
+* Added AdRotator.cs, BulletedList.cs, and FileUpload.cs to Anthem-2005 project.
+
+2007-03-01	Andy Miller	<amiller@structured-solutions.net>
+
+* Modified Manager.cs to fix sourceforge bug 1670394.
+* Modified Manager.cs to encode response for file upload request.
+
+2007-02-26	Andy Miller	<amiller@structured-solutions.net>
+
+* Modified Timer.cs to fix two problems: 1) timer did not start on page load when Enabled=true, and 2) timer did not stop immediately.
+* Modified Timer.aspx sample page to demonstrate multiple timers starting and stopping.
+
+NOTE: This fix includes two new Timer methods: StartTimer and StopTimer. StartTimer is used to start the timer during a callback. StopTimer is used to stop the timer during a callback. Setting Enabled=true or Enabled=false during a callback will not change the state of the timer on the client. Use StartTimer or StopTimer.
+
+2007-02-01	Andy Miller	<amiller@structured-solutions.net>
+
+* Modified Manager.cs to use AddScriptForClientSideEval to handle Response.Redirect.
+
+2007-01-31	Andy Miller	<amiller@structured-solutions.net>
+
+* Modified Manager.cs to ensure that only one Anthem_CallBack is appended to the callback URL and to only examine the first value if more than one is appended to the URL.
+* Modified ValidationSummary.cs to wrap validation summary in a <div> instead of a <span>.
+
+2007-01-25	Andy Miller	<amiller@structured-solutions.net>
+
+* Released 1.4.0.0
+
+2007-01-16	Andy Miller	<amiller@structured-solutions.net>
+
+* Modified Manager.cs to correct Response.Redirect handler so that it works with non-IE browsers.
+* MOdified Anthem.js to correct page script handler so that it works with non-IE browsers.
+* Modified Anthem.js so that EnabledDuringCallBack=false works with LinkButton.
+
+2007-01-16	Andy Miller	<amiller@structured-solutions.net>
+
+* Modified Anthem.js to pass the full event to PreCallBackFunction and CallBackCancelledFunction so that authors can extract other event properties such as the mouse location. Could not pass the full event to the PostCallBackFunction because the event is cleared during the callback.
+* Modified Manager.cs to use GetAnthemManagerKey() instead of ANTHEM_MANAGER_KEY to support simultaneous requests (multiple threads).
+
+2007-01-08	Andy Miller	<amiller@structured-solutions.net>
+
+* Modified Anthem.js to add the eventType to the PreCallBackFunction, CallBackCancelledFunction, and PostCallBackFunction arguments.
+
+2006-12-22	Andy Miller	<amiller@structured-solutions.net>
+
+* Modified Manager.cs to remove code that disables trace during callback.
+* Modified Manager.cs to mark BaseHref Obsolete and changed GetPageURL to return full page URL instead of truncated version. Note that this should provide better support for URL rewriting.
+
+2006-12-05	Andy Miller	<amiller@structured-solutions.net>
+
+* Modified Manager.cs to restore IncludePageScripts to handle 3rd party scripts.
+* Modified Manager.cs to write numeric values using InvariantCulture.
+* Modified Manager.cs to allow Anthem.Manager.AddManager early in page lifecycle (before Page controls have been created).
+* Modified Manager.cs to add an overload of AddScriptAttribute for ListItem.
+* Modified Panel.cs to remove call to base.Visible which breaks Panel.Visible=false during callback.
+
+2006-12-05	Andy Miller	<amiller@structured-solutions.net>
+
+* Modified Anthem.js to capture correct ImageButton x, y coordinates in FireFox (thank you Marcelo and Rick).
+
+2006-11-28	Andy Miller	<amiller@structured-solutions.net>
+
+* Added HyperLink.cs and HyperLink.aspx
+
+2006-11-15	Andy Miller	<amiller@structured-solutions.net>
+
+* Modified Anthem.js to:
+- Remove "Anthem.Manager.GetScripts: false" magic string.
+- Modify Anthem_AddEvent to use a more reliable technique.
+- Modify Anthem_LoadPageScript to reduce script duplication.
+- Modify Anthem_PreProcessCallBack to call WebForm_OnSubmit() if it exists (this is the ASP.NET 2.0 page validator)
+* Modified all the validation controls to:
+- Removed OnInit override
+- Removed Validator_Load method
+- Removed SaveViewState override
+* Modified Anthem/Manager.cs to:
+- Add RegisterClientScriptBlock
+- Add RegisterClientScriptInclude
+- Add RegisterClientScriptResource (ASP.NET 2.0 only)
+- Add RegisterPageScriptBlock
+- Add RegisterStartupScript
+- Remove IncludePageScripts property
+- Maintain an internal collection of scripts which can be added to using the RegisterXXX methods
+- Modify GetScripts to send registered scripts followed by validation scripts
+- Modify GetScripts to include all validation script libraries
+- Modify OnPreRender to include validation scripts if required
+- Add ValidationScriptsRequired to determine if validation scripts are required
+* Modified Anthem/DropDownList.cs to use PersistanceMode.InnerDefaultProperty on Items override.
+* Modified Anthem-2003/AssemblyInfo.cs to be version 1.4.0.0.
+* Modified Anthem-2005/Properties/AssemblyInfo.cs to be version 1.4.0.0.
+* Modified Anthem-Examples-2003/PageScripts.aspx to remove use of Anthem.Manager.IncludePageScripts.
+* Modified Anthem-Examples-2003/Validation.aspx to use Validation.ascx has a more real-world example.
+* Added    Anthem-Examples-2003/Validation.ascx to demonstrate validation controls.
+* Modified Anthem-Examples-2003/Anthem-Examples-2003.csproj to include Validation.ascx (and some image files).
+* Modified Anthem-Examples-2005/PageScripts.aspx to remove use of Anthem.Manager.IncludePageScripts.
+* Modified Anthem-Examples-2005/Validation.aspx to use Validation.ascx has a more real-world example.
+* Added    Anthem-Examples-2005/Validation.ascx to demonstrate validation controls.
+* Added    Anthem/README.TXT as release notes.
+
+2006-11-11	Andy Miller	<amiller@structured-solutions.net>
+
+* Modified Anthem.js to remove leading "&" from encodedData.
+* Modified Calendar.cs to honor EnableCallBack and to properly encode ClientID for callback.
+* Modified Manager.cs to support page registration during Server.Transfer and to properly encode Response.Redirect URL for callback.
+
+2006-11-01	Andy Miller	<amiller@structured-solutions.net>
+
+* Modified Manager.cs to avoid adding empty querystring parameters to Anthem_DefaultUrl.
+
+2006-10-19	Andy Miller	<amiller@structured-solutions.net>
+
+* Renamed Changelog to CHANGELOG.TXT
+* Modified Manager.cs to add Page.OnUnload handler to capture Response.Redirect calls
+  and turn them into Manager.AddScriptForClientSideEval
+* Modified RedirectingClients.aspx sample to demonstrate Response.Redirect().
+* Modified Anthem.js to avoid unnecessary reference to control.innerText in
+  Anthem_PreProcessCallBack.
+
+2006-09-26	Andy Miller	<amiller@structured-solutions.net>
+
+* Add virtual modifier to all Anthem control methods and properties so they can
+  be overridden. See Feature Request [ 1558643 ]
+
+2006-09-26	Andy Miller	<amiller@structured-solutions.net>
+
+* Modified ConcurrentCallBacks.aspx sample to use ImageButtons.
+* Modified Anthem.js to include a marker comment so it is excluded from GetScripts.
+* Modified Anthem.js Anthem_RemoveHiddenInput to fix 1557957 and 1530795 (via ponkans)
+* Modified Manager.cs to simplify search for excluded scripts in GetScripts().
+* Modified Manager.cs to prepend "javascript:" to intrinsic event code.
+* Modified Manager.cs to look for "Anthem_CallBack" parameter in Request.Params
+  in preparation for possible move to hidden field.
+
+2006-09-05	Andy Miller	<amiller@structured-solutions.net>
+
+* Modified Anthem-Examples web sites to reference AnthemExtensions projects.
+* Added Extensions folder to Anthem-Examples web sites.
+* Added Default.aspx to Anthem-Examples web sites.
+* Added AutoSuggest.aspx to Anthem-Examples web sites.
+* Added EditLabel.aspx to Anthem-Examples web sites.
+* Modified Default.aspx to link to Anthem Extensions Examples.
+
+2006-08-21	Andy Miller	<amiller@structured-solutions.net>
+
+* Changed Manager.cs to be case insensitive when checking for Anthem_CallBack=true.
+* Changed Manager.cs to verify that IButtonControl is also WebControl.
+* Changed Manager.cs to use current response encoding instead of UTF-8.
+* Changed Anthem.js to use a custom encodeURIComponent function for backlevel browsers.
+* Changed version to 1.3.2.
+
+2006-07-24	Andy Miller	<amiller@structured-solutions.net>
+
+* Changed Manager.cs to detect DataCommand buttons in AddCallBacks.
+
+2006-07-19	Andy Miller	<amiller@structured-solutions.net>
+
+* Changed Manager.cs to use page.ResolveUrl(). Thank you vk.
+
+2006-07-18	Andy Miller	<amiller@structured-solutions.net>
+
+* Changed Manager.cs to insert another missing angle bracket. 
+  Thank you Phil.
+
+2006-07-11	Andy Miller	<amiller@structured-solutions.net>
+
+* Changed Manager.cs to insert missing angle bracket. Thank you
+  DomenicDenicola.
+* Changed Anthem.js for strict FireFox 1.5 compatibility. See
+  http://forums.anthemdotnet.com/forums/viewtopic.php?p=2066
+
+2006-07-06	Andy Miller	<amiller@structured-solutions.net>
+
+* Changed Manager.cs to find more scripts when IncludePageScripts=true.
+
+2006-06-30	Andy Miller	<amiller@structured-solutions.net>
+
+* Changed MultiView.cs to use "div" instead of "span". Thanks thechod.
+
+2006-06-29	Andy Miller	<amiller@structured-solutions.net>
+
+* Add DetailsView to Anthem library.
+* Add FormView to AnthemLibrary (thank you Manu).
+* Add DetailSource.cs to Anthem-Examples-2005 App_Code.
+* Updated GridView.aspx sample to include DetailsView
+  and FormsView.
+* Changed ImageButton.cs so that ImageUrlDuringCallBack
+  can be relative (i.e. ~/this.gif).
+
+2006-06-05	Andy Miller	<amiller@structured-solutions.net>
+
+* Add PreUpdate event to IUpdatableControl interface.
+* Add [DefaultValue(false)] to UpdateAfterCallBack.
+
+2006-06-05	Andy Miller	<amiller@structured-solutions.net>
+
+* Fixed a bug in AddCallBacks that prevented ASP controls in
+template columns from working. Updated the GridView sample
+page to demonstrate all 3 kinds of command buttons: ASP 
+controls in a template, Anthem controls in a template, and
+a command field.
+
+Files: Manager.cs, GridView.aspx.
+
+* Fixed a bug that prevented scripts from being attached to
+the page during callback response processing in FireFox.
+
+Files: Anthem.js
+
+* Refactored Anthem_FireCallBackEvent into Anthem_PreProcessCallBack
+and Anthem_PostProcessCallBack. This will make it easier to
+create custom controls that use Anthem_InvokeControlMethod
+and support the ICallBackControl interface.
+
+Files: Anthem.js
+
+2006-05-31	Andy Miller	<amiller@structured-solutions.net>
+
+* Add ToolboxBitmapAttribute to every Anthem control with
+an analog in WebControls.
+Files affected: Nearly every file was touched. The project
+files were also changed to include reference to System.Drawing.
+
+* Enhanced PageScripts support to include script libraries.
+For example <script src="library.js"/> is now supported.
+Files affected: Manager.cs, Anthem.js.
+
+* Fixed event validation error in .NET 2.0 if DropDownList
+or ListBox with no items was included inside of an Anthem
+control that implemented ICallbackContainerControl.
+Files affected: Anthem.js.
+
+* Fixed missing ImageButton click location if ImageButton
+did not include ImageUrlDuringCallBack or TextDuringCallBack.
+Files affected: Anthem.js.
+
+2006-05-27	Andy Miller	<amiller@structured-solutions.net>
+
+	* Add View.cs to Anthem-2005 project for VS intellisense
+	* Override Items property in several classes in Anthem-2005
+	to force <Items> element for VS2005 schema parser.
+	* Where possible move AddScriptAttribute from OnPreRender
+	to AddAttributesToRender to reduce the size of ViewState.
+	* Simply AddScriptToAttribute by creating a new method
+	called GetCallbackEventReference (similar to 
+	Page.GetPostbackEventReference). See Button.cs for example.
+	* Add DesignMode parameter to GetControlVisible so logic
+	can mimic Control.Visible in .NET 2.0. Solves MultiView
+	designer bug.
+	* Add prototype CustomControl2.cs that demonstrates how
+	to create a custom control (based on MSDN Custom Control
+	example).
+	* Add InvokeCustomControl.aspx sample page to demonstrate
+	CustomControl2.cs.
+	
+2006-05-13	Andy Miller <amiller@structured-solutions.net>
+	
+	* Change GetControlVisible logic to match Control.Visible
+	* Add code to validators to automatically include 
+	page scripts if visible changes during callback.
+
+2006-05-05	Andy Miller <amiller@structured-solutions.net>
+	
+	* Add support for pre/postcallbackfunction, etc to
+	all controls that create callbacks.
+	* Add support for adding javascript to page using
+	callback response (similar to adding controls to page).
+	* Fix calendar control.
+	* New samples for TexBox control and adding script.
+
+
+2006-04-26	Andy Miller <amiller@structured-solutions.net>
+
+	* Converted all Anthem properties to use ViewState. Some
+	cleanup to prepare for release.
+	* Removed UpdatePanel and added AddCallBacks property
+	to Anthem Panel. When AddCallBacks=true, it will add
+	callbacks to all standard child WebControls.
+
+2006-04-26	Andy Miller <amiller@structured-solutions.net>
+
+	* Add support for ValidationGroup to Button, ImageButton,
+	LinkButton, and DropDownList.
+
+2006-04-14	Andy Miller <amiller@structured-solutions.net>
+
+	* Add initial UpdatePanel. This includes adding a new EnableCallBack
+	property to the IUpdatableControl interface and implementing the
+	new property in all anthem controls.
+
+2006-04-14	Andy Miller <amiller@structured-solutions.net>
+
+	* Installed patch 1463797: Pre/Post CallBack functions
+	for DropDownList.
+
+2006-04-13	Andy Miller <amiller@structured-solutions.net>
+
+	* Fixed bug in ValidationSummary.cs that caused an exception
+	when Page.IsValid was called without Page.Validate.
+
+2006-04-06	Andy Miller <amiller@structured-solutions.net>
+
+	* Changes to allow control of the Anthem response type and response
+	encoding. Use <appSettings> Anthem.ResponseType and
+	Anthem.ResponseEncoding. See sample web.config for examples.
+
+2006-04-06	Andy Miller <amiller@structured-solutions.net>
+
+	* Insert missing semicolon in GridView.cs.
+	
+2006-04-05	Andy Miller	<amiller@structured-solutions.net>
+
+	* Changes to allow HTTP compression of callback response.
+	
+2006-04-05	Andy Miller	<amiller@structured-solutions.net>
+
+	* Mark Anthem assembly CLSCompliant. Fix bug 1462105.
+	
+2006-04-05	Andy Miller	<amiller@structured-solutions.net>
+
+	* Clear EVENTTARGET before InvokePageMethod, InvokeMasterPageMethod,
+	and InvokeControlMethod. Fix for bug 1429412.
+	
+2006-04-05	Andy Miller	<amiller@structured-solutions.net>
+
+	* Insert missing semicolon. Fix bug 1450485.
+	
+2006-04-05	Andy Miller	<amiller@structured-solutions.net>
+
+	* Revert revision 1.22 to Anthem.js to fix bug 1459836,
+	"CallBack dont fire dropdownlist if item is empty string"
+	
+2006-03-29	Andy Miller <amiller@structured-solutions.net>
+
+	* Add mouse coordinates to ImageButton client event.
+
+2006-03-29	Andy Miller <amiller@structured-solutions.net>
+
+	* Fix for DataGrid.cs to verify column index.
+
+2006-03-29	Andy Miller <amiller@structured-solutions.net>
+
+	* Fix for GridView.cs
+	
+2006-03-27  Manu Temmerman-Uyttenbroeck <manu.temmermanuyttenbroeck@gmail.com>
+
+	* Fix for validation group. (thx Andy!)
+
+2006-03-25  Manu Temmerman-Uyttenbroeck <manu.temmermanuyttenbroeck@gmail.com>
+
+	* CompareValidator.cs: Added file.
+	* CustomValidator.cs: Added file.
+	* RangeValidator.cs: Added file.
+	* RegularExpressionValidator.cs: Added file.
+	* RequiredFieldValidator.cs: Added file.
+	* ValidationSummary.cs: Added file.
+
+2006-03-21  Manu Temmerman-Uyttenbroeck <manu.temmermanuyttenbroeck@gmail.com>
+
+	* Anthem now generates valid html. (tag id's now start with 'Anthem_'
+          instead of '__')
+
+
+2006-03-17  Manu Temmerman-Uyttenbroeck <manu.temmermanuyttenbroeck@gmail.com>
+
+	* The TextBox now contains an AutoCallBack property.
+
+2006-03-13  Manu Temmerman-Uyttenbroeck <manu.temmermanuyttenbroeck@gmail.com>
+
+	* CheckBoxList.cs: Added file.
+	* RadioButton.cs: Added file.
+	* Added support to send a HashTable object to the client.
+
+2006-02-23  Jason Diamond  <jason@diamond.name>
+
+	* Timer.cs: Fixed not being able to disable the timer.
+
+2006-02-21  Jason Diamond  <jason@diamond.name>
+
+	* Anthem.js: Added support for a "global" error handler function,
+	Anthem_Error on the page.
+
+	* Manager.cs: Don't return "CONTROLNOTFOUND" errors when not trying to
+	invoke methods. Thanks to Manu for finding this.
+
+2006-02-17  Jason Diamond  <jason@diamond.name>
+
+	* Timer.cs: Fixed timer firing too much after triggering call backs
+	while the timer is ticking.
+
+2006-02-14  Jason Diamond  <jason@diamond.name>
+
+	* Manager.cs: Added Manu's fix for CheckBox events firing multiple
+	times after post backs.
+
+2006-02-04  Jason Diamond  <jason@diamond.name>
+
+	* Timer.cs: Fixed bug in the Enabled property that was returning true
+	as the default value.
+
+2006-02-04  Jason Diamond  <jason@diamond.name>
+
+	* Manager.cs: Added optional configuration setting to move Anthem
+	JavaScript out of pages.
+
+2006-02-04  Jason Diamond  <jason@diamond.name>
+
+	* Anthem.js: Removed delete statements since IE7 has issues with them.
+
+2006-02-04  Jason Diamond  <jason@diamond.name>
+
+	* Manager.cs: Added error checking for missing methods and controls.
+
+2006-02-03  Jason Diamond  <jason@diamond.name>
+
+	* DataList.cs, Repeater.cs: Added files.
+
+2006-01-26  Jason Diamond  <jason@diamond.name>
+
+	* Anthem.js, Manager.cs: Fixed "encypted" misspellings.
+
+2006-01-26  Jason Diamond  <jason@diamond.name>
+
+	* CheckBox.cs: Switched from onchange to onclick to get it to work in
+	IE.
+
+2006-01-20  Jason Diamond  <jason@diamond.name>
+
+	* Anthem.js, Button.cs, DropDownList.cs, ImageButton.cs,
+	LinkButton.cs, TextBox.cs: Removed focus code since it's not really
+	necessary now that we have to explitily set UpdateAfterCallBack to
+	true to update controls.
+
+	* Manager.cs: Removed some dead code.
+
+2006-01-20  Jason Diamond  <jason@diamond.name>
+
+	* IAnthemControl.cs: Renamed interface to IUpdatableControl and moved
+	into Manager.cs. Renamed UpdateAfterCallBack property to
+	AutoUpdateAfterCallBack. Changed Update method into
+	UpdateAfterCallBack property.
+
+	* *.cs: Updated all controls to conform to new interface definition.
+
+	* ListBox.cs, PlaceHolder.cs: Added files.
+
+2006-01-19  Jason Diamond  <jason@diamond.name>
+
+	* HiddenField.cs: Added file.
+
+2006-01-19  Jason Diamond  <jason@diamond.name>
+
+	* Anthem.js: Fixed another (hopefully the last) event validation bug
+	related to asp:ListBox controls.
+
+2006-01-18  Jason Diamond  <jason@diamond.name>
+
+	* Table.cs: Added file.
+
+2006-01-18  Jason Diamond  <jason@diamond.name>
+
+	* Anthem.js, Button.cs, ImageButton.cs, LinkButton.cs: Added some
+	support for integrating with the ASP.NET validation controls.
+
+2006-01-18  Jason Diamond  <jason@diamond.name>
+
+	* *.cs: The DesignMode property doesn't exist prior to 2.0 so add a
+	hack to get it to compile.
+
+2006-01-18  Jason Diamond  <jason@diamond.name>
+
+	* Anthem.js: Fixed bug with duplicate __EVENTTARGET fields and also a
+	bug with event validation failing on the server when a ListBox control
+	is on the page.
+
+2006-01-17  Jason Diamond  <jason@diamond.name>
+
+	* *.cs: Moved around a bunch of the common Anthem control code to
+	prevent the container element from being output during DesignMode.
+	This should make Absolute and Relative Positioning possible.
+
+2006-01-17  Jason Diamond  <jason@diamond.name>
+
+	* Anthem.js: Set the display style on container elements to none when
+	the control is invisible.
+
+2006-01-16  Jason Diamond  <jason@diamond.name>
+
+	* Anthem.js, Manager.cs: Added support for invoking methods on master
+	pages with Anthem_InvokeMasterPage method.
+
+2006-01-16  Jason Diamond  <jason@diamond.name>
+
+	* Anthem.js: Added Anthem_SetHiddenInputValue function and used it to
+	fix bug when __EVENTVALIDATION is not initially present on a 2.0 page.
+
+2006-01-16  Jason Diamond  <jason@diamond.name>
+
+	* Manager.cs: Optimized the way visiblity is checked for.
+
+	* *.cs: Override RenderControl for each Anthem control to help
+	visibilty work in 2.0.
+
+2006-01-15  Jason Diamond  <jason@diamond.name>
+
+	* Manager.cs: Added AddScriptAttribute method which preserves existing
+	script if it exists.
+
+	* *.cs: Updated to use new AddScriptAttribute method.
+
+2006-01-15  Jason Diamond  <jason@diamond.name>
+
+	* GridView.cs: Added support for modifying ImageButton controls in
+	CommandField columns to do call backs.
+
+2006-01-14  Jason Diamond  <jason@diamond.name>
+
+	* Image.cs, RadioButtonList.cs: Added files.
+
+	* Anthem.js: Added AnthemRadioButtonList_OnClick function.
+
+2006-01-14  Jason Diamond  <jason@diamond.name>
+
+	* Anthem.js: Added Anthem_AddEvent function.
+
+	* CheckBox.cs, Timer.cs: Added files.
+
+2006-01-14  Jason Diamond  <jason@diamond.name>
+
+	* Anthem.js: Any exceptions caught while evaluating client-side script
+	are now alerted to help during development.
+
+2006-01-14  Jason Diamond  <jason@diamond.name>
+
+	* Calendar.cs: Added file. The header links don't do call backs yet
+	and I can't see a way to get it done. We might just have to write a
+	whole new Calendar control.
+
+2006-01-14  Jason Diamond  <jason@diamond.name>
+
+	* *.cs: Made all controls implement IAnthemControl. Added custom
+	Visible properties to all controls. Reformatted using spaces.
+
+2006-01-12  Jason Diamond  <jason@diamond.name>
+
+	* Anthem.js: Fixed bug with empty controls found by Andrey Kuzmin.
+
+2006-01-12  Jason Diamond  <jason@diamond.name>
+
+	* WebPartZone.cs: Added file. THIS DOES NOT WORK YET!
+
+2006-01-09  Jason Diamond  <jason@diamond.name>
+
+	* MultiView.cs: Added file.
+
+2006-01-07  Jason Diamond  <jason@diamond.name>
+
+	* Anthem.js: Allow synchronous call backs with Anthem_InvokePageMethod
+	and Anthem_InvokeControlMethod.
+
+2006-01-07  Jason Diamond  <jason@diamond.name>
+
+	* GridView.cs: Added file.
+
+	* Anthem.js, Manager.cs: Updated Anthem_FireEvent to support the
+	__EVENTARGEMENT parameter. Added support for the __VIEWSTATEENCRYPTED
+	parameter.
+
+	* DataGrid.cs, Debugger.cs, DropDownList.cs: Updated to use the new
+	signature for Anthem_FireEvent.
+
+2006-01-03  Jason Diamond  <jason@diamond.name>
+
+	* Panel.cs: Implemented IAnthemControl and override Visible to fix the
+	problem when Visible is initially set to false.
+

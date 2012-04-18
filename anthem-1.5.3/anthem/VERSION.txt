@@ -1,0 +1,18 @@
+This is version 1.5.3.
+
+If only bugs are fixed between releases, the "micro" version number
+will change. For example, 1.2.3 will become 1.2.4. You should have
+little trouble moving forwards or backwards (unless, of course, you
+depend on the bug fix which means you won't be able to move
+backwards).
+
+If a new feature is added (new control, class, property, or method), 
+The "minor" version number will change. 1.2.3 will become 1.3.0. This means
+that you should be able to move forwards but might not be able to move
+backwards (because you might be using the new feature).
+
+If compatibility is broken (remove a feature, class, property, or method
+or change the signature of an existing property or method), the "major" 
+version number. 1.2.3 will become 2.0.0. This means you
+might not be able to move either forwards or backwards.
+

@@ -1,0 +1,34 @@
+<%@ Master Language="C#" MasterPageFile="~/Sample.master" %>
+
+<script runat="server">
+
+    void Page_Load()
+    {
+        Anthem.Manager.Register(this);
+    }
+
+    [Anthem.Method]
+    public DateTime GetNow()
+    {
+        return DateTime.Now;
+    }
+
+</script>
+
+<asp:Content ContentPlaceHolderID="ContentPlaceHolder" runat="server">
+
+    <script type="text/javascript">
+        function GetNow() {
+            Anthem_InvokeMasterPageMethod("GetNow", null, function(result) {
+                document.getElementById("now").innerHTML = result.value;
+            });
+        }
+    </script>
+
+    <button onclick="GetNow();return false">
+        GetNow</button>
+    <span id="now"></span>
+    <hr />
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

@@ -1,0 +1,38 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anthem-2003", "Anthem-2003\Anthem-2003.csproj", "{DCD15BCB-B0CB-41A3-AFA6-9D4C59B273B5}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anthem-Examples-2003", "http://localhost/Anthem-Examples-2003/Anthem-Examples-2003.csproj", "{27848185-F53D-4144-8832-BEA7123A3967}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnthemExtensions-2003", "AnthemExtensions-2003\AnthemExtensions-2003.csproj", "{DFD2177C-B1F1-4323-9920-44EDA466FEEF}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{DCD15BCB-B0CB-41A3-AFA6-9D4C59B273B5}.Debug.ActiveCfg = Debug|.NET
+		{DCD15BCB-B0CB-41A3-AFA6-9D4C59B273B5}.Debug.Build.0 = Debug|.NET
+		{DCD15BCB-B0CB-41A3-AFA6-9D4C59B273B5}.Release.ActiveCfg = Release|.NET
+		{DCD15BCB-B0CB-41A3-AFA6-9D4C59B273B5}.Release.Build.0 = Release|.NET
+		{27848185-F53D-4144-8832-BEA7123A3967}.Debug.ActiveCfg = Debug|.NET
+		{27848185-F53D-4144-8832-BEA7123A3967}.Debug.Build.0 = Debug|.NET
+		{27848185-F53D-4144-8832-BEA7123A3967}.Release.ActiveCfg = Release|.NET
+		{27848185-F53D-4144-8832-BEA7123A3967}.Release.Build.0 = Release|.NET
+		{DFD2177C-B1F1-4323-9920-44EDA466FEEF}.Debug.ActiveCfg = Debug|.NET
+		{DFD2177C-B1F1-4323-9920-44EDA466FEEF}.Debug.Build.0 = Debug|.NET
+		{DFD2177C-B1F1-4323-9920-44EDA466FEEF}.Release.ActiveCfg = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

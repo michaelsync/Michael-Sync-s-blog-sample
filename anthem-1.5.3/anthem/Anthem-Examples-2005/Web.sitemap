@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode url="~/Default.aspx" title="Anthem.NET">
+    <siteMapNode url="http://sourceforge.net/projects/anthem-dot-net" title="Download from SourceForge" />
+    <siteMapNode url="http://anthem-dot-net.sourceforge.net/docs/" title="API Documentation" />
+    <siteMapNode title="Topics">
+      <siteMapNode url="~/Overview.aspx" title="Overview" />
+      <siteMapNode url="~/Configuration.aspx" title="Configuration" />
+      <siteMapNode url="~/ConcurrentCallBacks.aspx" title="Concurrent callbacks" />
+      <siteMapNode title="Add Controls Dynamically">
+        <siteMapNode url="~/DynamicAnthemControls.aspx?1" title="Add Anthem controls dynamically" />
+        <siteMapNode url="~/DynamicUserControls.aspx" title="Add user control dynamically" />
+        <siteMapNode url="~/PageScripts.aspx?3" title="Adding client-side scripts dynamically" />
+      </siteMapNode>
+      <siteMapNode title="File Handling">
+        <siteMapNode url="~/FileDownload.aspx?1" title="File downloading" />
+        <siteMapNode url="~/FileUpload.aspx?1" title="File uploading" />
+      </siteMapNode>
+      <siteMapNode title="Calling Client-Side Functions">
+        <siteMapNode url="~/InvokeClientSideFunctionAfterCallBack.aspx?1" title="Invoke client-side function after callback" />
+        <siteMapNode url="~/PageScripts.aspx?1" title="Adding client-side scripts dynamically" />
+        <siteMapNode url="~/PreAndPostCallBackFunctions.aspx" title="Pre- and PostCallBack functions" />
+      </siteMapNode>
+      <siteMapNode title="Calling Server-Side Methods">
+        <siteMapNode url="~/InvokeMasterPageMethod.aspx" title="Invoke MasterPage method" />
+        <siteMapNode url="~/InvokePageMethod.aspx" title="Invoke Page method" />
+        <siteMapNode url="~/InvokeCustomControlMethod.aspx" title="Invoke ServerControl method" />
+        <siteMapNode url="~/InvokeUserControlMethod.aspx" title="Invoke UserControl method" />
+        <siteMapNode url="~/MissingControl.aspx?1" title="Missing control error" />
+        <siteMapNode url="~/MissingMethod.aspx?1" title="Missing method error" />
+        <siteMapNode url="~/ReturningDataSets.aspx" title="Returning datasets" />
+      </siteMapNode>
+      <siteMapNode title="Creating you own Anthem Controls">
+        <siteMapNode url="~/InvokeCustomControl.aspx" title="Invoke custom control" />
+      </siteMapNode>
+      <siteMapNode title="Handling Errors">
+        <siteMapNode url="~/MissingControl.aspx?2" title="Missing control error" />
+        <siteMapNode url="~/MissingMethod.aspx?2" title="Missing method error" />
+        <siteMapNode url="~/UnhandledExceptions.aspx" title="Unhandled exceptions" />
+        <siteMapNode url="~/RedirectingClientsOnErrors.aspx?1" title="Redirecting when error occurs" />
+      </siteMapNode>
+      <siteMapNode title="Handling Redirects">
+        <siteMapNode url="~/RedirectingClients.aspx" title="Redirecting clients" />
+        <siteMapNode url="~/RedirectingClientsOnErrors.aspx?2" title="Redirecting when error occurs" />
+        <siteMapNode url="~/ServerTransferExample.aspx" title="Server Transfer" />
+      </siteMapNode>
+      <siteMapNode url="~/ResponseEncoding.aspx" title="Response encoding" />
+      <siteMapNode url="~/Validation.aspx?1" title="Validation">
+        <siteMapNode url="~/ValidationGroups.aspx" title="Validation groups" />
+        <siteMapNode url="~/ValidationNoClientScript.aspx" title="Server-side validation" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="~/Core.aspx" title="Core Library Samples">
+      <siteMapNode title="AdRotator">
+      </siteMapNode>
+      <siteMapNode title="BulletedList">
+      </siteMapNode>
+      <siteMapNode url="~/ButtonsAndLabels.aspx" title="Button" >
+        <siteMapNode url="~/MoreButtonProperties.aspx" title="More button properties" />
+        <siteMapNode url="~/DynamicAnthemControls.aspx?2" title="Add controls dynamically" />
+        <siteMapNode url="~/InvokeClientSideFunctionAfterCallBack.aspx?2" title="Invoke client-side function after callback" />
+      </siteMapNode>
+      <siteMapNode url="~/Calendar.aspx" title="Calendar">
+      </siteMapNode>
+      <siteMapNode url="~/CheckBox.aspx" title="CheckBox">
+      </siteMapNode>
+      <siteMapNode title="CheckBoxList">
+      </siteMapNode>
+      <siteMapNode url="~/Validation.aspx?2" title="CompareValidator">
+      </siteMapNode>
+      <siteMapNode url="~/Validation.aspx?3" title="CustomValidator">
+      </siteMapNode>
+      <siteMapNode url="~/DataGrid.aspx" title="DataGrid">
+        <siteMapNode url="~/DataBindDuringCallBack.aspx" title="DataBind during callBack" />
+      </siteMapNode>
+      <siteMapNode url="~/DataList.aspx" title="DataList">
+        <siteMapNode url="~/DataList2.aspx" title="Auto callBacks" />
+      </siteMapNode>
+      <siteMapNode url="~/GridView.aspx?3" title="DetailsView">
+      </siteMapNode>
+      <siteMapNode url="~/DropDownLists.aspx" title="DropDownList">
+        <siteMapNode url="~/DropDownListsPrePost.aspx?2" title="Pre- and PostCallBack functions" />
+      </siteMapNode>
+      <siteMapNode url="~/FileUpload.aspx?2" title="FileUpload">
+      </siteMapNode>
+      <siteMapNode url="~/GridView.aspx?2" title="FormView">
+      </siteMapNode>
+      <siteMapNode url="~/GridView.aspx?1" title="GridView">
+      </siteMapNode>
+      <siteMapNode url="~/HiddenField.aspx" title="HiddenField">
+      </siteMapNode>
+      <siteMapNode url="~/HyperLink.aspx" title="HyperLink">
+      </siteMapNode>
+      <siteMapNode url="~/Image.aspx" title="Image">
+      </siteMapNode>
+      <siteMapNode url="~/ImageButtons.aspx" title="ImageButton">
+      </siteMapNode>
+      <siteMapNode title="Label">
+      </siteMapNode>
+      <siteMapNode url="~/LinkButtons.aspx" title="LinkButton">
+      </siteMapNode>
+      <siteMapNode url="~/ListBox.aspx" title="ListBox">
+      </siteMapNode>
+      <siteMapNode url="~/MultiView.aspx" title="MultiView">
+      </siteMapNode>
+      <siteMapNode url="PanelsAndVisibility.aspx" title="Panel">
+        <siteMapNode url="UpdatePanel.aspx" title="Update Panel" />
+      </siteMapNode>
+      <siteMapNode title="PlaceHolder">
+      </siteMapNode>
+      <siteMapNode title="RadioButton">
+      </siteMapNode>
+      <siteMapNode url="~/RadioButtonList.aspx" title="RadioButtonList">
+      </siteMapNode>
+      <siteMapNode url="~/Validation.aspx?4" title="RangeValidator">
+      </siteMapNode>
+      <siteMapNode url="~/Validation.aspx?5" title="RegularExpressionValidator">
+      </siteMapNode>
+      <siteMapNode url="~/Repeater.aspx" title="Repeater">
+        <siteMapNode url="~/RepeatersAndViewState.aspx" title="Repeater without ViewState" />
+      </siteMapNode>
+      <siteMapNode url="~/Validation.aspx?6" title="RequiredFieldValidator">
+      </siteMapNode>
+      <siteMapNode url="~/Table.aspx" title="Table">
+      </siteMapNode>
+      <siteMapNode url="~/TextBox.aspx" title="TextBox">
+      </siteMapNode>
+      <siteMapNode url="~/Timer.aspx" title="Timer">
+      </siteMapNode>
+      <siteMapNode url="~/Validation.aspx?7" title="ValidationSummary">
+      </siteMapNode>
+      <siteMapNode title="View">
+      </siteMapNode>
+      <siteMapNode url="~/WebParts.aspx" title="WebPartZone">
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Extension Samples">
+      <siteMapNode url="~/Extensions/Calendar.aspx" title="Calendar" />
+      <siteMapNode url="~/Extensions/EditLabel.aspx" title="EditLabel" />
+      <siteMapNode url="~/Extensions/GridView.aspx" title="GridView" />
+      <siteMapNode url="~/Extensions/ProgressBar.aspx" title="ProgressBar" />
+      <siteMapNode url="~/Extensions/TextBox.aspx" title="TextBox" />
+      <siteMapNode url="~/Extensions/AutoComplete.aspx" title="YuiAutoComplete" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

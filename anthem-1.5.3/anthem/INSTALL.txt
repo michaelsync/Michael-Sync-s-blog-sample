@@ -1,0 +1,130 @@
+======================================
+Steps to install on Visual Studio 2003
+======================================
+
+
+1. Download the Anthem.NET zip to your hard-disk.
+
+2. Right-click on the zip file, select "Properties" and "Unblock" the files.
+
+3. Unzip the file and copy the created directory 'anthem' with all its
+subcontent to a location where you'd want to work with it. Let's
+pretend that location is C:\anthem.
+
+4. Create a virtual directory in your Internet Information Services called
+"Anthem-Examples-2003" and point it to the following subdirectory (under
+anthem):
+
+C:\anthem\Anthem-Examples-2003
+
+Alternatively, you could just right-click the Anthem-Examples-2003
+folder, select "Properties", switch to the "Web Sharing" tab, select
+"Share this folder", and then accept all of the default settings on
+the dialog that appears.
+
+5. Now fire up your VS.NET 2003 and open the project solution file named
+"Anthem-2003.sln" or double-click the .sln file directly.
+
+6. Before compiling and running the program make sure you first select the
+"Start Up Project" to be 'Anthem-Examples-2003' (using Solution Explorer) and
+not 'Anthem-2003', but that one should have been loaded in the first place, and
+the reference to it from the WebForm project should be correct.
+
+7. Select the web form you want to be the "Set as Start Page", in this case
+'Default.aspx'.
+
+8. Now press F5 (or Ctrl F5) to run in Debug mode (or in Run without
+debugging). Note that if VS.NET 2003 complains here saying not being able to
+debug is probably caused by not having enabled IIS Integrated Security in the
+IIS manager applet.
+
+
+======================================
+Steps to install on Visual Studio 2005
+======================================
+
+
+1. Download the Anthem.NET zip to your hard-disk.
+
+2. Right-click on the zip file, select "Properties" and "Unblock" the files.
+
+3. Unzip the file and copy the created directory 'anthem' with all its
+subcontent to a location where you'd want to work with it.
+
+4. Open the solution file named "Anthem-2005.sln" and make sure the disk
+partition mentioned near the top is the one you actually used; in other words,
+in my case the .sln indicated a path C:\...xxx while I placed the solution in
+E:\...xxx; here, renaming "C" to "E" suffices.
+
+5. Fire up your VS.NET 2005 IDE and click on 'Open Project' and browse to the
+"Anthem-2005.sln" file, then open it.
+
+6. Two projects should appear, one named "Anthem-2005" (the .NET v2.0 library)
+and the other "Anthem-Examples-2005" indicating the project path.
+
+7. Select the example project to be the Start Up Project and select
+'Default.aspx' to be the "Start Page" (using Solution Explorer) and press F5;
+the built-in web server (aka Cassini) starts running and displays the page in
+your browser.
+
+
+=============================================================
+Steps to install on Visual Web Developer 2005 Express Edition
+=============================================================
+
+
+1. Download the Anthem.NET zip to your hard-disk.
+
+2. Right-click on the zip file, select "Properties" and "Unblock" the files.
+
+3. Unzip the file and copy the created directory 'anthem' with all its
+subcontent to a location where you'd want to work with it.
+
+4. Open up a command prompt and change into the anthem directory. This
+is the directory that contains the file called Anthem-2005.sln.
+
+5. Execute the following command:
+
+%SystemRoot%\Microsoft.NET\Framework\v2.0.50727\MSBuild.exe Anthem-2005.sln
+
+Note that %SystemRoot% is an environmental variable that probably
+points to C:\WINDOWS.
+
+6. You should see a bunch of output that eventually indicates that the
+solution was successfully built with no errors (but possibly a few
+warnings).
+
+7. You'll find that a folder called PrecompiledWeb appears after
+performing the build but you can ignore or even delete that. The thing
+you needed to happen was to build the Anthem.dll assembly and get it
+copied over to the Anthem-Examples-2005\bin folder for you.
+
+8. Start Visual Web Developer and select "File | Open Web Site". Open
+the Anthem-Examples-2005 folder.
+
+9. You should be able to view the examples by selecting "Debug | Start
+Debugging" or "Debug | Start Without Debugging" using the built-in web
+server.
+
+
+============================================
+Steps to use Anthem.NET in your own projects
+============================================
+
+
+Add a reference to your project browsing to the anthem subdirectory named
+"Anthem-2005" and open the file named 'Anthem-2005.csproj'.
+
+Alternatively, if you want to separate the Anthem project but you'll need for
+example if you want to develop on VS.NET 2005 to copy both folders
+"Anthem-2005" and "anthem" since the first makes use of the latter.
+
+The same goes for VS.NET 2003 projects, but you should copy the "Anthem-2003"
+and "anthem" directories. Once you've determined a final location for the
+projects in question, you can add the projects to your solution and after that
+you add the project as a reference to your main project you're working on.
+
+Alternatively, you can simply copy the generated dll, place it in your
+bin directory; this makes your project independent from the original
+project and is fine if nothing's going to change in Anthem.
+

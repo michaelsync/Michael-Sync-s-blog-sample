@@ -1,0 +1,415 @@
+<VisualStudioProject>
+    <CSHARP
+        ProjectType = "Web"
+        ProductVersion = "7.10.6030"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{27848185-F53D-4144-8832-BEA7123A3967}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "Anthem.Examples"
+                AssemblyOriginatorKeyFile = ""
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                PreBuildEvent = ""
+                PostBuildEvent = ""
+                RootNamespace = "Anthem.Examples"
+                RunPostBuildEvent = "OnBuildSuccess"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Release"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "true"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.dll"
+                />
+                <Reference
+                    Name = "System.Web"
+                    AssemblyName = "System.Web"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Web.dll"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Drawing.dll"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Data.dll"
+                />
+                <Reference
+                    Name = "Anthem-2003"
+                    Project = "{DCD15BCB-B0CB-41A3-AFA6-9D4C59B273B5}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
+                <Reference
+                    Name = "System.Web.Services"
+                    AssemblyName = "System.Web.Services"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Web.Services.dll"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.XML.dll"
+                />
+                <Reference
+                    Name = "AnthemExtensions-2003"
+                    Project = "{DFD2177C-B1F1-4323-9920-44EDA466FEEF}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "accept.png"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "button_run.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "button_run-down.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ButtonsAndLabels.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Calendar.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "CheckBox.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ConcurrentCallBacks.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Configuration.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "CustomControl.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "CustomControl2.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataBindDuringCallBack.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DataGrid.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DataList.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DataList2.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Default.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DropDownLists.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DropDownListsPrePost.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DynamicAnthemControls.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DynamicUserControls.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "FileDownload.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "FileUpload.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Image.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ImageButtons.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "InvokeClientSideFunctionAfterCallBack.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "InvokeCustomControl.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "InvokeCustomControlMethod.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "InvokePageMethod.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "InvokeUserControlMethod.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "LinkButtons.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ListBox.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "MemoryLeaks.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "MemoryLeaksWithUpdates.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "MissingControl.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "MissingMethod.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "MoreButtonProperties.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Overview.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "PageScripts.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "PanelsAndVisibility.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "PreAndPostCallBackFunctions.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "PreUpdate.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RadioButtonList.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RedirectingClients.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RedirectingClientsOnErrors.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Repeater.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RepeatersAndViewState.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ResponseEncoding.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ReturningDataSets.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ServerTransferDestination.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ServerTransferExample.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Table.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "TextBox.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Timer.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "tiny_red.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "UnhandledExceptions.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "UpdatePanel.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "UserControl.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "UserControlWithCheckBox.ascx"
+                    SubType = "UserControl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Validation.ascx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Validation.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "ValidationNoClientScript.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web.config"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Extensions\AutoSuggest.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Extensions\AutoSuggestTextBox.js"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Extensions\Default.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Extensions\EditLabel.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Extensions\ProgressBar.aspx"
+                    SubType = "Form"
+                    BuildAction = "Content"
+                />
+            </Include>
+        </Files>
+    </CSHARP>
+</VisualStudioProject>
+

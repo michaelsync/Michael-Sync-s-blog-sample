@@ -1,0 +1,73 @@
+<%@ Master Language="C#" MasterPageFile="~/Sample.master" %>
+<%@ Register TagPrefix="Anthem" Namespace="Anthem" Assembly="Anthem" %> 
+<%@ Register TagPrefix="AnthemExtensions" Namespace="AnthemExtensions" Assembly="AnthemExtensions" %>
+
+<script runat="server">
+    
+    [Anthem.Method]
+    public string[][] acmaster_Search(string query)
+    {
+        ArrayList result = new ArrayList();
+        query = HttpUtility.UrlDecode(query).Trim();
+        result.Add(new string[] { query + "a", "master" });
+        result.Add(new string[] { query + "b", "master" });
+        result.Add(new string[] { query + "c", "master" });
+        return (string[][])result.ToArray(typeof(string[]));
+    }
+
+    protected void acmaster_SelectedItemChanged(object sender, EventArgs e)
+    {
+        this.labelmaster.Text = "You selected: " + acmaster.SelectedItem;
+        this.labelmaster.UpdateAfterCallBack = true;
+    }
+    
+</script>
+
+<asp:Content ContentPlaceHolderID="ContentPlaceHolder" runat="server">
+
+    <h1>YuiAutoComplete Sample</h1>
+    <p>This page demonstrates the YuiAutoComplete control in the AnthemExtensions library.
+        YuiAutoComplete is a wrapper for the <a href="http://developer.yahoo.com/yui/autocomplete/">
+            YUI AutoComplete</a> control. AutoComplete is one of the many widgets availalbe
+        in the <a href="http://developer.yahoo.com/yui/">Yahoo! User Interface Library</a>.
+        YuiAutoComplete exposes all of the properties of YUI AutoComplete and generates
+        the javascript to load the libraries, initialize the component, and connect YUI
+        AutoComplete with Anthem.</p>
+    <p>You start implementing the YuiAutoComplete control by selecting a TextBox to monitor and defining a Search event
+    handler. Then load the page in a browser. When you start typing in the TextBox, the YUI AutoComplete control
+    will use Anthem to call the Search event handler on the server. The results are displayed in a list which YUI AutoComplete
+    monitors. If you select one of the items in the list, the corresponding value will be entered in the TextBox for you.</p>
+    <p>The YUI AutoComplete javascript libraries are <a href="http://developer.yahoo.com/yui/articles/hosting/">
+            hosted by Yahoo</a>, so you do not need to add the scripts to your site.</p>
+    <p>There are 3 instances of the YuiAutoComplete control on this page: one in the MasterPage, one in the Page, and one
+    in a User Control. This is to demonstrate that you can use the YuiAutoComplete control in all of these contexts.</p>
+    <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td valign="top">
+                <fieldset>
+                    <legend>Master Page</legend>
+                    <div class="container">
+                        <Anthem:TextBox ID="textmaster" runat="server" CssClass="textbox" />
+                        <AnthemExtensions:YuiAutoComplete ID="acmaster" runat="server" 
+                            AnimHoriz="true" 
+                            AutoCallBack="true" 
+                            CssClass="results" 
+                            DefaultText="you can set default text" 
+                            FormatResult="formatResult" 
+                            OnSearch="acmaster_Search" 
+                            OnSelectedItemChanged="acmaster_SelectedItemChanged" 
+                            TextBox="textmaster" 
+                            UseShadow="true">
+                        </AnthemExtensions:YuiAutoComplete>
+                    </div>
+                </fieldset>
+                <div style="text-align:center">
+                    <Anthem:Label ID="labelmaster" runat="server" />
+                </div>
+            </td>
+            <td valign="top">
+                <asp:contentplaceholder id="ContentPlaceHolder1" runat="server" />
+            </td>
+        </tr>
+    </table>
+</asp:Content>

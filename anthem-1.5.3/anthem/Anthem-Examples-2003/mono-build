@@ -1,0 +1,6 @@
+#!/bin/sh
+
+mkdir bin
+mcs -out:bin/Anthem.dll -t:library -r:System.Data.dll -r:System.Web.dll -r:System.Web.Services.dll ../Anthem/*.cs -resource:../Anthem/Anthem.js,Anthem.Anthem.js
+mcs -out:bin/Anthem.Examples.dll -t:library -r:System.Web.dll -r:bin/Anthem.dll CustomControl.cs
+

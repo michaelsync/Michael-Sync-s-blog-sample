@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{804C7DD0-0124-4A0B-AFA8-E90F403387AB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Anthem</RootNamespace>
+    <AssemblyName>Anthem</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;V2</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;V2</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Anthem.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Anthem\AdRotator.cs">
+      <Link>AdRotator.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\BulletedList.cs">
+      <Link>BulletedList.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\Button.cs">
+      <Link>Button.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\Calendar.cs">
+      <Link>Calendar.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\CheckBox.cs">
+      <Link>CheckBox.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\CheckBoxList.cs">
+      <Link>CheckBoxList.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\CompareValidator.cs">
+      <Link>CompareValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\CustomValidator.cs">
+      <Link>CustomValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\DataGrid.cs">
+      <Link>DataGrid.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\DataList.cs">
+      <Link>DataList.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\Debugger.cs">
+      <Link>Debugger.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\DetailsView.cs">
+      <Link>DetailsView.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\DropDownList.cs">
+      <Link>DropDownList.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\FileUpload.cs">
+      <Link>FileUpload.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\FormView.cs">
+      <Link>FormView.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\GridView.cs">
+      <Link>GridView.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\HiddenField.cs">
+      <Link>HiddenField.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\HyperLink.cs">
+      <Link>HyperLink.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\ICallBackContainerControl.cs">
+      <Link>ICallBackContainerControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\ICallBackControl.cs">
+      <Link>ICallBackControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\Image.cs">
+      <Link>Image.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\ImageButton.cs">
+      <Link>ImageButton.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\IUpdatableControl.cs">
+      <Link>IUpdatableControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\Label.cs">
+      <Link>Label.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\LinkButton.cs">
+      <Link>LinkButton.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\ListBox.cs">
+      <Link>ListBox.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\Manager.cs">
+      <Link>Manager.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\MethodAttribute.cs">
+      <Link>MethodAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\MultiView.cs">
+      <Link>MultiView.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\Panel.cs">
+      <Link>Panel.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\PlaceHolder.cs">
+      <Link>PlaceHolder.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\RadioButton.cs">
+      <Link>RadioButton.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\RadioButtonList.cs">
+      <Link>RadioButtonList.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\RangeValidator.cs">
+      <Link>RangeValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\RegularExpressionValidator.cs">
+      <Link>RegularExpressionValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\Repeater.cs">
+      <Link>Repeater.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\RequiredFieldValidator.cs">
+      <Link>RequiredFieldValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\Table.cs">
+      <Link>Table.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\TextBox.cs">
+      <Link>TextBox.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\Timer.cs">
+      <Link>Timer.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\ValidationSummary.cs">
+      <Link>ValidationSummary.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\View.cs">
+      <Link>View.cs</Link>
+    </Compile>
+    <Compile Include="..\Anthem\WebPartZone.cs">
+      <Link>WebPartZone.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\Anthem\Anthem.js">
+      <Link>Anthem.js</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\Anthem\CHANGELOG.TXT">
+      <Link>CHANGELOG.TXT</Link>
+    </Content>
+    <Content Include="..\Anthem\README.TXT">
+      <Link>README.TXT</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

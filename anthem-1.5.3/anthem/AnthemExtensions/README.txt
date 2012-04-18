@@ -1,0 +1,1 @@
+AnthemExtensions is used to maintain extensions to the Anthem framework that have been created by Anthem users. The extensions are not part of Anthem. Please contact the extension author if you have questions or suggestions.

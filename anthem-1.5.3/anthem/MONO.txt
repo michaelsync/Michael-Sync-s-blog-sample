@@ -1,0 +1,16 @@
+I've seen Anthem work on Mono 1.1.12.1 and 1.1.13.2 on a Ubuntu Linux
+machine.
+
+Since Mono's support for ASP.NET 2.0 is still not quite complete,
+you'll have to use the examples in the Anthem-Examples-2003 folder.
+
+There's a script in Anthem-Examples-2003 folder called mono-build.
+Invoking that script should build Anthem and the other code needed for
+the examples to run.
+
+Once you've built Anthem, start xsp and browse to Default.aspx.
+
+To use Anthem in your own applications, copy Anthem.dll out of the
+Anthem-Examples-2003\bin folder into your application's bin folder and
+follow the examples.
+
