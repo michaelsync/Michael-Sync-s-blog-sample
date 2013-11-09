@@ -1,7 +1,7 @@
 #Modified and simplified version of https://www.windowsazure.com/en-us/develop/net/common-tasks/continuous-delivery/
 
 
-$thumbprint = "1785b057afb4c2ef7b5f863e7a5659469959068e"
+$thumbprint = "{Your Cert's Thumbprint}"
 $myCert = Get-Item cert:\\CurrentUser\My\$thumbprint
 $subscriptionId = "{Your Subscription Id}"
 $subscriptionName = "{Your Subscription Name}"
@@ -10,13 +10,13 @@ $workerroleservice = "{Your Worker Role Name}"
 
 $slot = "staging" #staging or production
 
-$package = "{Path of your Azure project}\bin\Release\app.publish\Hive.Azure.cspkg"
+$package = "{Path of your Azure project}\bin\Release\app.publish\{Your Project}.cspkg"
 $configuration = {Path of your Azure project}\bin\Release\app.publish\ServiceConfiguration.Cloud.cscfg"
 
 $timeStampFormat = "g"
 
 Write-Output "Running Azure Imports"
-Import-Module "C:\Program Files (x86)\Microsoft SDKs\Windows Azure\PowerShell\Azure\*.psd1"
+Import-Module "C:\Program Files (x86)\Microsoft SDKs\Windows Azure\PowerShell\Azure\Azure.psd1"
 Import-AzurePublishSettingsFile "{Path where you stored your azure setting\Azure.publishsettings"
 
 function Publish(){
