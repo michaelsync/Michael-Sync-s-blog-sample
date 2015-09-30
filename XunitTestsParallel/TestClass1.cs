@@ -27,7 +27,8 @@ namespace XunitTestsParallel {
         private void TestClass1TestMethod1() {
             using (ShimsContext.Create()) {
                 ShimServiceLocator.CurrentGet = () => mockServiceLocator.Object;
-                Assert.Equal<int>(1, ServiceLocator.Current.GetInstance<IDataStore>().GetData());
+                var data = ServiceLocator.Current.GetInstance<IDataStore>().GetData();
+                Assert.Equal<int>(1, data);
             }
         }
 
@@ -35,7 +36,8 @@ namespace XunitTestsParallel {
         private void TestClass1TestMethod2() {
             using (ShimsContext.Create()) {
                 ShimServiceLocator.CurrentGet = () => mockServiceLocator.Object;
-                Assert.Equal<int>(1, ServiceLocator.Current.GetInstance<IDataStore>().GetData());
+                var data = ServiceLocator.Current.GetInstance<IDataStore>().GetData();
+                Assert.Equal<int>(1, data);
             }
         }
     }
