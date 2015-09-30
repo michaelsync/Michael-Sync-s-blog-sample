@@ -1,0 +1,362 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Practices.ServiceLocation.1.3.0.0.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Practices.ServiceLocation.Fakes.ShimActivationException">
+            <summary>Shim type of Microsoft.Practices.ServiceLocation.ActivationException</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.ShimActivationException.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.ShimActivationException.#ctor(Microsoft.Practices.ServiceLocation.ActivationException)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:Microsoft.Practices.ServiceLocation.Fakes.ShimActivationException.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.ShimActivationException.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.ShimActivationException.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.ShimActivationException.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.ShimActivationException.Bind(System.Runtime.Serialization.ISerializable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.ShimActivationException.Constructor">
+            <summary>Sets the shim of ActivationException.ActivationException()</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.ShimActivationException.ConstructorString">
+            <summary>Sets the shim of ActivationException.ActivationException(String message)</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.ShimActivationException.ConstructorStringException">
+            <summary>Sets the shim of ActivationException.ActivationException(String message, Exception innerException)</summary>
+        </member>
+        <member name="T:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocator">
+            <summary>Shim type of Microsoft.Practices.ServiceLocation.ServiceLocator</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocator.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocator.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocator.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocator.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocator.CurrentGet">
+            <summary>Sets the shim of ServiceLocator.get_Current()</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocator.IsLocationProviderSetGet">
+            <summary>Sets the shim of ServiceLocator.get_IsLocationProviderSet()</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocator.SetLocatorProviderServiceLocatorProvider">
+            <summary>Sets the shim of ServiceLocator.SetLocatorProvider(ServiceLocatorProvider newProvider)</summary>
+        </member>
+        <member name="T:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase">
+            <summary>Shim type of Microsoft.Practices.ServiceLocation.ServiceLocatorImplBase</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.#ctor(Microsoft.Practices.ServiceLocation.ServiceLocatorImplBase)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.AllInstances.FormatActivateAllExceptionMessageExceptionType">
+            <summary>Sets the shim of ServiceLocatorImplBase.FormatActivateAllExceptionMessage(Exception actualException, Type serviceType)</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.AllInstances.FormatActivationExceptionMessageExceptionTypeString">
+            <summary>Sets the shim of ServiceLocatorImplBase.FormatActivationExceptionMessage(Exception actualException, Type serviceType, String key)</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.AllInstances.GetAllInstancesOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{Microsoft.Practices.ServiceLocation.ServiceLocatorImplBase,System.Collections.Generic.IEnumerable{``0}})">
+            <summary>Sets the shim of ServiceLocatorImplBase.GetAllInstances()</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.AllInstances.GetAllInstancesType">
+            <summary>Sets the shim of ServiceLocatorImplBase.GetAllInstances(Type serviceType)</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.AllInstances.GetInstanceOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{Microsoft.Practices.ServiceLocation.ServiceLocatorImplBase,``0})">
+            <summary>Sets the shim of ServiceLocatorImplBase.GetInstance()</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.AllInstances.GetInstanceOf1String``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{Microsoft.Practices.ServiceLocation.ServiceLocatorImplBase,System.String,``0})">
+            <summary>Sets the shim of ServiceLocatorImplBase.GetInstance(String key)</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.AllInstances.GetInstanceType">
+            <summary>Sets the shim of ServiceLocatorImplBase.GetInstance(Type serviceType)</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.AllInstances.GetInstanceTypeString">
+            <summary>Sets the shim of ServiceLocatorImplBase.GetInstance(Type serviceType, String key)</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.AllInstances.GetServiceType">
+            <summary>Sets the shim of ServiceLocatorImplBase.GetService(Type serviceType)</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.Bind(Microsoft.Practices.ServiceLocation.IServiceLocator)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.Bind(System.IServiceProvider)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.Constructor">
+            <summary>Sets the shim of ServiceLocatorImplBase.ServiceLocatorImplBase()</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.FormatActivateAllExceptionMessageExceptionType">
+            <summary>Sets the shim of ServiceLocatorImplBase.FormatActivateAllExceptionMessage(Exception actualException, Type serviceType)</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.FormatActivationExceptionMessageExceptionTypeString">
+            <summary>Sets the shim of ServiceLocatorImplBase.FormatActivationExceptionMessage(Exception actualException, Type serviceType, String key)</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.GetAllInstancesOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.Collections.Generic.IEnumerable{``0}})">
+            <summary>Sets the shim of ServiceLocatorImplBase.GetAllInstances()</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.GetAllInstancesType">
+            <summary>Sets the shim of ServiceLocatorImplBase.GetAllInstances(Type serviceType)</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.GetInstanceOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{``0})">
+            <summary>Sets the shim of ServiceLocatorImplBase.GetInstance()</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.GetInstanceOf1String``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.String,``0})">
+            <summary>Sets the shim of ServiceLocatorImplBase.GetInstance(String key)</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.GetInstanceType">
+            <summary>Sets the shim of ServiceLocatorImplBase.GetInstance(Type serviceType)</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.GetInstanceTypeString">
+            <summary>Sets the shim of ServiceLocatorImplBase.GetInstance(Type serviceType, String key)</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.ShimServiceLocatorImplBase.GetServiceType">
+            <summary>Sets the shim of ServiceLocatorImplBase.GetService(Type serviceType)</summary>
+        </member>
+        <member name="T:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException">
+            <summary>Stub type of Microsoft.Practices.ServiceLocation.ActivationException</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.#ctor(System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.#ctor(System.String,System.Exception)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.AttachBackingFieldToHelpLink">
+            <summary>Attaches delegates to emulate StubActivationException.HelpLink as a property with a backing field.</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.AttachBackingFieldToSource">
+            <summary>Attaches delegates to emulate StubActivationException.Source as a property with a backing field.</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.Data">
+            <summary>Sets the stub of Exception.get_Data()</summary>
+        </member>
+        <member name="F:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.DataGet">
+            <summary>Sets the stub of Exception.get_Data()</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.GetBaseException">
+            <summary>Sets the stub of Exception.GetBaseException()</summary>
+        </member>
+        <member name="F:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.GetBaseException01">
+            <summary>Sets the stub of Exception.GetBaseException()</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>Sets the stub of Exception.GetObjectData(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="F:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.GetObjectDataSerializationInfoStreamingContext">
+            <summary>Sets the stub of Exception.GetObjectData(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.HelpLink">
+            <summary>Sets the stub of Exception.get_HelpLink()</summary>
+        </member>
+        <member name="F:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.HelpLinkGet">
+            <summary>Sets the stub of Exception.get_HelpLink()</summary>
+        </member>
+        <member name="F:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.HelpLinkSetString">
+            <summary>Sets the stub of Exception.set_HelpLink(String value)</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.InitializeStub">
+            <summary>Initializes a new instance of type StubActivationException</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.Message">
+            <summary>Sets the stub of Exception.get_Message()</summary>
+        </member>
+        <member name="F:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.MessageGet">
+            <summary>Sets the stub of Exception.get_Message()</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.Source">
+            <summary>Sets the stub of Exception.get_Source()</summary>
+        </member>
+        <member name="F:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.SourceGet">
+            <summary>Sets the stub of Exception.get_Source()</summary>
+        </member>
+        <member name="F:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.SourceSetString">
+            <summary>Sets the stub of Exception.set_Source(String value)</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.StackTrace">
+            <summary>Sets the stub of Exception.get_StackTrace()</summary>
+        </member>
+        <member name="F:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.StackTraceGet">
+            <summary>Sets the stub of Exception.get_StackTrace()</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.ToString">
+            <summary>Sets the stub of Exception.ToString()</summary>
+        </member>
+        <member name="F:Microsoft.Practices.ServiceLocation.Fakes.StubActivationException.ToString01">
+            <summary>Sets the stub of Exception.ToString()</summary>
+        </member>
+        <member name="T:Microsoft.Practices.ServiceLocation.Fakes.StubIServiceLocator">
+            <summary>Stub type of Microsoft.Practices.ServiceLocation.IServiceLocator</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubIServiceLocator.#ctor">
+            <summary>Initializes a new instance of type StubIServiceLocator</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubIServiceLocator.GetAllInstancesOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.Collections.Generic.IEnumerable{``0}})">
+            <summary>Sets stubs of GetAllInstances()</summary>
+        </member>
+        <member name="F:Microsoft.Practices.ServiceLocation.Fakes.StubIServiceLocator.GetAllInstancesType">
+            <summary>Sets the stub of IServiceLocator.GetAllInstances(Type serviceType)</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubIServiceLocator.GetInstanceOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{``0})">
+            <summary>Sets stubs of GetInstance()</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubIServiceLocator.GetInstanceOf1String``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.String,``0})">
+            <summary>Sets stubs of GetInstance(String key)</summary>
+        </member>
+        <member name="F:Microsoft.Practices.ServiceLocation.Fakes.StubIServiceLocator.GetInstanceType">
+            <summary>Sets the stub of IServiceLocator.GetInstance(Type serviceType)</summary>
+        </member>
+        <member name="F:Microsoft.Practices.ServiceLocation.Fakes.StubIServiceLocator.GetInstanceTypeString">
+            <summary>Sets the stub of IServiceLocator.GetInstance(Type serviceType, String key)</summary>
+        </member>
+        <member name="F:Microsoft.Practices.ServiceLocation.Fakes.StubIServiceLocator.GetServiceType">
+            <summary>Sets the stub of IServiceProvider.GetService(Type serviceType)</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubIServiceLocator.Microsoft#Practices#ServiceLocation#IServiceLocator#GetAllInstances(System.Type)">
+            <summary>Sets the stub of IServiceLocator.GetAllInstances(Type serviceType)</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubIServiceLocator.Microsoft#Practices#ServiceLocation#IServiceLocator#GetAllInstances``1">
+            <summary>Sets the stub of IServiceLocator.GetAllInstances()</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubIServiceLocator.Microsoft#Practices#ServiceLocation#IServiceLocator#GetInstance(System.Type)">
+            <summary>Sets the stub of IServiceLocator.GetInstance(Type serviceType)</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubIServiceLocator.Microsoft#Practices#ServiceLocation#IServiceLocator#GetInstance(System.Type,System.String)">
+            <summary>Sets the stub of IServiceLocator.GetInstance(Type serviceType, String key)</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubIServiceLocator.Microsoft#Practices#ServiceLocation#IServiceLocator#GetInstance``1">
+            <summary>Sets the stub of IServiceLocator.GetInstance()</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubIServiceLocator.Microsoft#Practices#ServiceLocation#IServiceLocator#GetInstance``1(System.String)">
+            <summary>Sets the stub of IServiceLocator.GetInstance(String key)</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubIServiceLocator.System#IServiceProvider#GetService(System.Type)">
+            <summary>Sets the stub of IServiceProvider.GetService(Type serviceType)</summary>
+        </member>
+        <member name="T:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase">
+            <summary>Stub type of Microsoft.Practices.ServiceLocation.ServiceLocatorImplBase</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.DoGetAllInstances(System.Type)">
+            <summary>Sets the stub of ServiceLocatorImplBase.DoGetAllInstances(Type serviceType)</summary>
+        </member>
+        <member name="F:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.DoGetAllInstancesType">
+            <summary>Sets the stub of ServiceLocatorImplBase.DoGetAllInstances(Type serviceType)</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.DoGetInstance(System.Type,System.String)">
+            <summary>Sets the stub of ServiceLocatorImplBase.DoGetInstance(Type serviceType, String key)</summary>
+        </member>
+        <member name="F:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.DoGetInstanceTypeString">
+            <summary>Sets the stub of ServiceLocatorImplBase.DoGetInstance(Type serviceType, String key)</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.FormatActivateAllExceptionMessage(System.Exception,System.Type)">
+            <summary>Sets the stub of ServiceLocatorImplBase.FormatActivateAllExceptionMessage(Exception actualException, Type serviceType)</summary>
+        </member>
+        <member name="F:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.FormatActivateAllExceptionMessageExceptionType">
+            <summary>Sets the stub of ServiceLocatorImplBase.FormatActivateAllExceptionMessage(Exception actualException, Type serviceType)</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.FormatActivationExceptionMessage(System.Exception,System.Type,System.String)">
+            <summary>Sets the stub of ServiceLocatorImplBase.FormatActivationExceptionMessage(Exception actualException, Type serviceType, String key)</summary>
+        </member>
+        <member name="F:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.FormatActivationExceptionMessageExceptionTypeString">
+            <summary>Sets the stub of ServiceLocatorImplBase.FormatActivationExceptionMessage(Exception actualException, Type serviceType, String key)</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.GetAllInstances``1">
+            <summary>Sets the stub of ServiceLocatorImplBase.GetAllInstances()</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.GetAllInstances(System.Type)">
+            <summary>Sets the stub of ServiceLocatorImplBase.GetAllInstances(Type serviceType)</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.GetAllInstancesOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.Collections.Generic.IEnumerable{``0}})">
+            <summary>Sets stubs of GetAllInstances()</summary>
+        </member>
+        <member name="F:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.GetAllInstancesType">
+            <summary>Sets the stub of ServiceLocatorImplBase.GetAllInstances(Type serviceType)</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.GetInstance``1">
+            <summary>Sets the stub of ServiceLocatorImplBase.GetInstance()</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.GetInstance(System.Type,System.String)">
+            <summary>Sets the stub of ServiceLocatorImplBase.GetInstance(Type serviceType, String key)</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.GetInstance(System.Type)">
+            <summary>Sets the stub of ServiceLocatorImplBase.GetInstance(Type serviceType)</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.GetInstance``1(System.String)">
+            <summary>Sets the stub of ServiceLocatorImplBase.GetInstance(String key)</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.GetInstanceOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{``0})">
+            <summary>Sets stubs of GetInstance()</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.GetInstanceOf1String``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.String,``0})">
+            <summary>Sets stubs of GetInstance(String key)</summary>
+        </member>
+        <member name="F:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.GetInstanceType">
+            <summary>Sets the stub of ServiceLocatorImplBase.GetInstance(Type serviceType)</summary>
+        </member>
+        <member name="F:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.GetInstanceTypeString">
+            <summary>Sets the stub of ServiceLocatorImplBase.GetInstance(Type serviceType, String key)</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.GetService(System.Type)">
+            <summary>Sets the stub of ServiceLocatorImplBase.GetService(Type serviceType)</summary>
+        </member>
+        <member name="F:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.GetServiceType">
+            <summary>Sets the stub of ServiceLocatorImplBase.GetService(Type serviceType)</summary>
+        </member>
+        <member name="M:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.InitializeStub">
+            <summary>Initializes a new instance of type StubServiceLocatorImplBase</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Microsoft.Practices.ServiceLocation.Fakes.StubServiceLocatorImplBase.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+    </members>
+</doc>
